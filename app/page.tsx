@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 
 // ─── SVG Icon System ──────────────────────────────────────────────────────────
 const Icon = {
@@ -674,10 +675,12 @@ function Nav({ onNav }: { onNav: (s: string) => void }) {
             onClick={() => onNav("hero")}
             className="flex items-center gap-3 shrink-0"
           >
-            <img
+            <Image
               src="/images/fikr-logo.jpeg"
               alt="Fikr logo"
-              className="h-9 w-9 rounded-full object-contain bg-white/10 p-0.5 ring-1 ring-olive/30"
+              width={36}
+              height={36}
+              className="rounded-full object-contain bg-white/10 p-0.5 ring-1 ring-olive/30"
             />
             <div className="text-left hidden xs:block">
               <div className="text-white font-display font-bold text-base leading-tight">
@@ -741,10 +744,12 @@ function Nav({ onNav }: { onNav: (s: string) => void }) {
           className={`absolute left-0 top-0 bottom-0 w-72 bg-forest flex flex-col py-8 px-7 gap-5 transition-transform duration-350 ${open ? "translate-x-0" : "-translate-x-full"}`}
         >
           <div className="flex items-center justify-between mb-2">
-            <img
+            <Image
               src="/images/fikr-logo.jpeg"
               alt="Logo"
-              className="h-11 w-11 rounded-full object-contain bg-white/10 p-1 ring-1 ring-olive/30"
+              width={44}
+              height={44}
+              className="rounded-full object-contain bg-white/10 p-1 ring-1 ring-olive/30"
             />
             <button
               className="text-white/60 hover:text-white"
@@ -805,10 +810,12 @@ function Hero({ onNav }: { onNav: (s: string) => void }) {
     >
       {/* Bg image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/images/hero-background.jpg"
           alt="Teacher teaching children Quran"
-          className="w-full h-full object-cover object-center opacity-50"
+          fill
+          className="object-cover object-center opacity-50"
+          priority
         />
         <div className="absolute inset-0 bg-forest/82" />
         <div className="absolute inset-0 bg-gradient-to-b from-forest/70 via-transparent to-forest/95" />
@@ -893,10 +900,12 @@ function Hero({ onNav }: { onNav: (s: string) => void }) {
 
         {/* Logo lockup */}
         <div className="anim-fade-up d-200 flex items-center justify-center gap-3 mb-6 soft-3d">
-          <img
+          <Image
             src="/images/fikr-logo.jpeg"
             alt="Fikr Quran Academy"
-            className="h-14 w-14 rounded-full object-contain bg-white/10 ring-2 ring-olive/30 p-1 floating-glow"
+            width={56}
+            height={56}
+            className="rounded-full object-contain bg-white/10 ring-2 ring-olive/30 p-1 floating-glow"
           />
           <div className="text-left">
             <div className="font-display text-xl text-white font-bold leading-tight text-depth">
@@ -1008,9 +1017,11 @@ function About() {
             className={`reveal-r ${vis ? "visible" : ""}`}
             style={{ transitionDelay: ".2s" }}
           >
-            <img
+            <Image
               src="/images/students-class.jpg"
               alt="Students in a Quran class"
+              width={600}
+              height={400}
               className="w-full h-full min-h-64 object-cover rounded-3xl shadow-xl"
             />
           </div>
@@ -1040,9 +1051,11 @@ function About() {
               </p>
             </div>
             <div className="w-36 shrink-0 hidden sm:block">
-              <img
+              <Image
                 src="/images/mission-image.jpg"
                 alt="Mission"
+                width={144}
+                height={200}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -1053,9 +1066,11 @@ function About() {
             style={{ transitionDelay: ".4s" }}
           >
             <div className="w-36 shrink-0 hidden sm:block">
-              <img
+              <Image
                 src="/images/vision-image.jpg"
                 alt="Vision"
+                width={144}
+                height={200}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -1128,10 +1143,11 @@ function WhyChoose({ onNav }: { onNav: (s: string) => void }) {
             style={{ transitionDelay: ".15s" }}
           >
             <div className="relative rounded-3xl overflow-hidden h-full min-h-80 shadow-2xl">
-              <img
+              <Image
                 src="/images/mission-image.jpg"
                 alt="Student with Quran"
-                className="w-full h-full object-cover absolute inset-0"
+                fill
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-7">
@@ -2123,10 +2139,12 @@ function Footer({ onNav }: { onNav: (s: string) => void }) {
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img
+              <Image
                 src="/images/fikr-logo.jpeg"
                 alt="Fikr logo"
-                className="h-11 w-11 rounded-full object-contain bg-white/10 p-1 ring-1 ring-olive/25"
+                width={44}
+                height={44}
+                className="rounded-full object-contain bg-white/10 p-1 ring-1 ring-olive/25"
               />
               <div>
                 <div className="font-display text-lg font-bold leading-tight">

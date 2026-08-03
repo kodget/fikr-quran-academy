@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    unoptimized: true,
     domains: [],
     formats: ["image/webp", "image/avif"],
   },
@@ -11,6 +12,9 @@ const nextConfig = {
   experimental: {
     optimizeCss: false,
   },
+  output: "export",
+  trailingSlash: true,
+  basePath: "",
 };
 
 module.exports = nextConfig;
