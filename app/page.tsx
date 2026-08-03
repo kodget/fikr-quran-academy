@@ -413,38 +413,31 @@ const testimonials: Testimonial[] = [
 const programmes = [
   {
     title: "Basic Qaidah",
-    level: "Beginner",
+    level: "Foundation",
     Icon: Icon.Book,
     accent: "#9BAD30",
-    desc: "Master Arabic letters, pronunciation, and foundational Qaidah reading through structured lessons for all ages.",
+    desc: "Foundational course designed to teach students how to read Arabic. Learn to recognize and pronounce the Arabic alphabet and establish solid groundwork for reading the Qur'an following Tajweed rulings.",
   },
   {
-    title: "Fluency in Recitation",
+    title: "Reading The Qur'an Fluently (Nazrah)",
     level: "Intermediate",
     Icon: Icon.Mic,
     accent: "#D77129",
-    desc: "Build confidence and fluency through guided recitation practice with expert, personalised feedback every session.",
+    desc: "For students with basic Arabic knowledge who struggle with fluency. Focuses on improving pronunciation, intonation, and fluency in Qur'an recitation.",
   },
   {
-    title: "Tajweed Mastery",
-    level: "Intermediate–Advanced",
-    Icon: Icon.Sparkles,
-    accent: "#9BAD30",
-    desc: "Learn the precise rules of Tajweed for accurate, beautiful Qur'an recitation that honours every letter.",
-  },
-  {
-    title: "Hifz Programme",
-    level: "All Levels",
+    title: "Memorization of The Qur'an (Hifzul Qur'an)",
+    level: "Advanced",
     Icon: Icon.Moon,
-    accent: "#D77129",
-    desc: "A structured, supported journey to memorise the entire Qur'an — with daily revision, goal setting, and accountability.",
+    accent: "#9BAD30",
+    desc: "For students who can read the Qur'an fluently but want to memorize it. Teaches memorization techniques, portion breakdown, and focuses on recitation with proper Tajweed.",
   },
   {
-    title: "Murojah (Revision)",
+    title: "Revision For Huffaz (Murojah)",
     level: "Huffaz",
     Icon: Icon.RotateCcw,
-    accent: "#9BAD30",
-    desc: "Purpose-built for Huffaz to consolidate and maintain their memorisation with intelligent spaced-revision techniques.",
+    accent: "#D77129",
+    desc: "For students who have already memorized the Qur'an but struggle with retention. Focuses on regular revision, recitation, and techniques to maintain memorization.",
   },
 ];
 
@@ -661,7 +654,7 @@ function Nav({ onNav }: { onNav: (s: string) => void }) {
     "Programmes",
     "Admission",
     "Fees",
-    "Testimonials",
+    "Terms",
     "Contact",
   ];
   return (
@@ -995,21 +988,21 @@ function About() {
                 Our Story
               </h3>
               <p className="text-forest/65 font-sans leading-relaxed mb-4">
-                Fikr Quran Academy was founded with a single, clear purpose: to
-                make authentic, structured Qur'anic education accessible to
-                every Muslim family — regardless of where they live.
+                Fikr Quran Academy is an online remarkable institution that
+                plays a pivotal role in educating individuals about the profound
+                teachings of the Qur'an. It serves as a hub for learning,
+                understanding, and connecting with the Qur'an.
               </p>
               <p className="text-forest/65 font-sans leading-relaxed mb-4">
-                Operating entirely online via Google Meet, we have built a
-                community of dedicated students from Nigeria, the UK, Canada,
-                Ghana, and beyond. Our qualified teachers are carefully selected
-                for both knowledge and the ability to nurture learners of all
-                ages.
+                We focus on helping the Muslim Ummah achieve Qur'anic excellence
+                through our personalized one-on-one classes (30 to 45 minutes
+                per session) with our highly knowledgeable and dedicated
+                instructors.
               </p>
               <p className="text-forest/65 font-sans leading-relaxed">
-                We believe every Muslim deserves to connect deeply with the
-                Qur'an — not just to recite it, but to understand, memorise, and
-                live by it.
+                Operating entirely online, we have built a community of
+                dedicated students who connect deeply with the Qur'an — not just
+                to recite it, but to understand, memorize, and live by it.
               </p>
             </div>
           </div>
@@ -1042,12 +1035,12 @@ function About() {
                 Our Mission
               </span>
               <h3 className="font-display text-2xl text-white font-bold mb-3">
-                Accessible, Authentic Education
+                Our Mission
               </h3>
               <p className="text-white/60 font-sans text-sm leading-relaxed">
-                To provide every student a personalised, structured, and
-                spiritually enriching journey — rooted in the Qur'an and Sunnah,
-                accessible from anywhere in the world.
+                To provide individuals around the world with the opportunity to
+                learn and have access to high-quality Qur'anic education by
+                reciting with precision and excelling in memorization.
               </p>
             </div>
             <div className="w-36 shrink-0 hidden sm:block">
@@ -1082,12 +1075,12 @@ function About() {
                 Our Vision
               </span>
               <h3 className="font-display text-2xl text-white font-bold mb-3">
-                Africa's Leading Qur'an Institution
+                Our Vision
               </h3>
               <p className="text-white/60 font-sans text-sm leading-relaxed">
-                To become the most trusted online Qur'an and Islamic education
-                academy in Africa, building a generation of Muslims rooted in
-                the Book of Allah.
+                To create an inclusive and accessible learning environment for
+                students to have numerous students who will become Hufaazul
+                Qur'an through our impact.
               </p>
             </div>
           </div>
@@ -1524,12 +1517,12 @@ function Admission() {
 function Fees({ onNav }: { onNav: (s: string) => void }) {
   const { ref, vis } = useReveal();
   const perks = [
-    "Personalised 1-on-1 sessions via Google Meet",
-    "Flexible scheduling — 4 sessions per month",
-    "Weekly progress reports for parents",
-    "Access to digital learning materials",
-    "WhatsApp support between sessions",
-    "Free placement assessment included",
+    "Personalised 1-on-1 sessions (30 to 45 minutes per session)",
+    "Flexible scheduling to fit your lifestyle",
+    "Highly knowledgeable and dedicated instructors",
+    "Access to comprehensive Qur'anic education materials",
+    "Focus on recitation precision and memorization excellence",
+    "Regular progress monitoring and feedback",
     "Secure online payment & digital receipt",
   ];
   return (
@@ -1554,23 +1547,33 @@ function Fees({ onNav }: { onNav: (s: string) => void }) {
                 className="chip mb-4 inline-block"
                 style={{ background: "rgba(155,173,48,.18)", color: "#9BAD30" }}
               >
-                1-on-1 Programme
+                1-on-1 Programme Pricing
               </span>
-              <div>
-                <span className="font-display text-6xl sm:text-7xl text-white font-bold">
-                  ₦20k
-                </span>
-                <span className="text-white/40 font-sans text-base ml-2">
-                  / month (Nigeria)
-                </span>
-              </div>
-              <div className="mt-3">
-                <span className="font-display text-3xl text-white/60 font-bold">
-                  $25
-                </span>
-                <span className="text-white/35 font-sans text-sm ml-2">
-                  / month (International)
-                </span>
+              <div className="space-y-3">
+                <div>
+                  <span className="font-display text-4xl text-white font-bold">
+                    ₦40k
+                  </span>
+                  <span className="text-white/40 font-sans text-base ml-2">
+                    / month - Twice weekly (8 sessions)
+                  </span>
+                </div>
+                <div>
+                  <span className="font-display text-4xl text-white font-bold">
+                    ₦50k
+                  </span>
+                  <span className="text-white/40 font-sans text-base ml-2">
+                    / month - Three times weekly (12 sessions)
+                  </span>
+                </div>
+                <div>
+                  <span className="font-display text-4xl text-white font-bold">
+                    ₦60k
+                  </span>
+                  <span className="text-white/40 font-sans text-base ml-2">
+                    / month - Four times weekly (16 sessions)
+                  </span>
+                </div>
               </div>
             </div>
             {/* Perks */}
@@ -1671,10 +1674,9 @@ function Registration() {
   const [done, setDone] = useState(false);
   const prog = [
     "Basic Qaidah",
-    "Fluency in Recitation",
-    "Tajweed Mastery",
-    "Hifz Programme",
-    "Murojah / Revision",
+    "Reading The Qur'an Fluently (Nazrah)",
+    "Memorization of The Qur'an (Hifzul Qur'an)",
+    "Revision For Huffaz (Murojah)",
   ];
   const days = [
     "Monday",
@@ -1974,20 +1976,20 @@ function Contact() {
     {
       Icon: Icon.MessageCircle,
       label: "WhatsApp",
-      val: "+234 800 000 0000",
-      href: "https://wa.me/2348000000000",
+      val: "+234 911 438 5960",
+      href: "https://wa.me/2349114385960",
     },
     {
       Icon: Icon.Phone,
       label: "Phone",
-      val: "+234 800 000 0000",
-      href: "tel:+2348000000000",
+      val: "+234 818 201 6174",
+      href: "tel:+2348182016174",
     },
     {
       Icon: Icon.Mail,
       label: "Email",
-      val: "info@fikrquranacademy.com",
-      href: "mailto:info@fikrquranacademy.com",
+      val: "fikrquranacademy@gmail.com",
+      href: "mailto:fikrquranacademy@gmail.com",
     },
   ];
 
@@ -2123,6 +2125,93 @@ function Contact() {
   );
 }
 
+// ─── Terms ────────────────────────────────────────────────────────────────────
+function Terms() {
+  const { ref, vis } = useReveal();
+  const [openSection, setOpenSection] = useState<number | null>(null);
+
+  const sections = [
+    {
+      title: "Student Requirements & Class Policies",
+      content: [
+        "Students must register for their online Qur'an class in advance and pay the required fees.",
+        "Students are expected to attend all of their scheduled classes. If a student needs to miss a class, they must notify the teacher as soon as possible.",
+        "Students are expected to be on time for class. If a student is more than 15 minutes late, they may be marked as absent.",
+        "Students are expected to behave respectfully in class. This includes being polite to the teacher and refraining from disruptive behavior.",
+        "Students must have a computer with a working webcam and microphone in order to participate in online Qur'an classes.",
+      ],
+    },
+    {
+      title: "Recording & Materials Policy",
+      content: [
+        "Students are not allowed to record classes without the teacher's permission.",
+        "All of the materials used in online Qur'an classes are copyrighted. Students are not allowed to share or distribute these materials without permission.",
+      ],
+    },
+    {
+      title: "Privacy & Dispute Resolution",
+      content: [
+        "The online Qur'an class will respect the privacy of all students. Student information will not be shared with third parties without permission.",
+        "Any disputes arising from the online Qur'an class will be resolved amicably. If a resolution cannot be reached, the dispute will be submitted to arbitration.",
+      ],
+    },
+  ];
+
+  return (
+    <section id="terms" ref={ref} className="py-24 sm:py-32 bg-forest">
+      <div className="max-w-4xl mx-auto px-5 sm:px-8">
+        <div className={`text-center mb-16 reveal ${vis ? "visible" : ""}`}>
+          <SectionLabelLight>Policies</SectionLabelLight>
+          <h2 className="font-display text-4xl sm:text-5xl text-white font-bold mt-2 mb-3">
+            Terms and Conditions
+          </h2>
+          <OrnamentDivider light />
+        </div>
+
+        <div className="space-y-4">
+          {sections.map((section, i) => (
+            <div
+              key={i}
+              className={`bg-white/8 rounded-2xl border border-white/10 overflow-hidden backdrop-blur-sm hover:bg-white/12 transition-all duration-300 reveal ${vis ? "visible" : ""}`}
+              style={{ transitionDelay: `${i * 0.1 + 0.15}s` }}
+            >
+              <button
+                className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+                onClick={() => setOpenSection(openSection === i ? null : i)}
+              >
+                <span className="font-display text-white font-semibold text-base leading-snug">
+                  {section.title}
+                </span>
+                <span
+                  className={`text-white/40 shrink-0 transition-transform duration-300 ${openSection === i ? "rotate-180" : ""}`}
+                >
+                  <Icon.ChevronDown />
+                </span>
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-350 ${openSection === i ? "max-h-96" : "max-h-0"}`}
+              >
+                <div className="px-6 pb-5">
+                  <ul className="space-y-3">
+                    {section.content.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="text-olive text-sm mt-1.5">•</span>
+                        <span className="text-white/70 font-sans text-sm leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ─── Footer ───────────────────────────────────────────────────────────────────
 function Footer({ onNav }: { onNav: (s: string) => void }) {
   const links = [
@@ -2130,7 +2219,7 @@ function Footer({ onNav }: { onNav: (s: string) => void }) {
     "Programmes",
     "Admission",
     "Fees",
-    "Testimonials",
+    "Terms",
     "Contact",
   ];
   return (
@@ -2246,6 +2335,7 @@ export default function App() {
       <FAQ />
       <Registration />
       <Contact />
+      <Terms />
       <Footer onNav={scrollTo} />
     </div>
   );
