@@ -1,0 +1,10 @@
+{
+  "description": "An immersive online platform offering structured Quran education with personalized classes, flexible schedules, and resources for learners worldwide.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
