@@ -1,0 +1,5 @@
+node_modules
+.next
+.kiro
+*.log
+.DS_Store
