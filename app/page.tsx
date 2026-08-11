@@ -110,6 +110,38 @@ const Icon = {
       <polyline points="12 6 12 12 16 14" />
     </svg>
   ),
+  Calendar: () => (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="3" y="4" width="18" height="18" rx="2" />
+      <line x1="16" y1="2" x2="16" y2="6" />
+      <line x1="8" y1="2" x2="8" y2="6" />
+      <line x1="3" y1="10" x2="21" y2="10" />
+    </svg>
+  ),
+
+  Zap: () => (
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+    </svg>
+  ),
   Target: () => (
     <svg
       width="22"
@@ -416,28 +448,99 @@ const programmes = [
     level: "Foundation",
     Icon: Icon.Book,
     accent: "#9BAD30",
-    desc: "Foundational course designed to teach students how to read Arabic. Learn to recognize and pronounce the Arabic alphabet and establish solid groundwork for reading the Qur'an following Tajweed rulings.",
+    shortDesc:
+      "A structured foundation for beginners to recognize, pronounce, and join Arabic letters correctly before progressing to Qur'an recitation.",
+    description:
+      "Basic Qaidah is the foundational course for anyone starting their journey to read the Qur'an. Students learn to recognize Arabic letters, pronounce them correctly, and join them into words using a proven, structured method, building the reading skills required before progressing to Qur'an recitation. Suitable for both children and adult beginners with no prior knowledge of Arabic.",
+    learn: [
+      "The 29 Arabic letters and their correct pronunciation points (Makharij)",
+      "Letter shapes at the beginning, middle, and end of words",
+      "Joining letters to read simple words and syllables",
+      "Short vowels (Fatha, Kasra, Damma) and their effect on sound",
+      "Tanween, Sukoon, and Shaddah rules",
+      "Madd (elongation) rules for long vowels",
+      "Basic Noon Sakinah and Tanween rules",
+      "Reading fluency through guided practice and correction",
+    ],
+    importance:
+      "Qaidah is the gateway to the Qur'an. A weak foundation here can lead to mispronunciation habits that are difficult to fix later on. This course ensures students read Arabic accurately and confidently, setting them up for successful Qur'an recitation and future Tajweed learning.",
+    duration:
+      "Students should be able to finish the foundational book and start reading the Qur'an after 4 to 6 months of consistent classes, depending on their age and learning pace, with 3 to 4 sessions per week.",
   },
+
   {
     title: "Reading The Qur'an Fluently (Nazrah)",
     level: "Intermediate",
     Icon: Icon.Mic,
     accent: "#D77129",
-    desc: "For students with basic Arabic knowledge who struggle with fluency. Focuses on improving pronunciation, intonation, and fluency in Qur'an recitation.",
+    shortDesc:
+      "Build fluency, confidence, and accuracy by moving from basic Arabic reading to reading directly from the Mushaf.",
+    description:
+      "Nazrah is the course students take after completing Basic Qaidah, where they move from reading simple words to reading the Qur'an itself directly from the Mushaf. Students apply the letter and vowel rules learned in Qaidah to real Qur'anic text, gradually building speed, accuracy, and confidence. The focus is on correct pronunciation and smooth, connected reading rather than memorization, preparing students for proper Tajweed application.",
+    learn: [
+      "Applying Qaidah rules directly to Qur'anic verses",
+      "Correct pronunciation of letters and words within continuous text",
+      "Recognizing and reading Waqf (stopping) and Wasl (continuation) signs",
+      "Basic Tajweed rules in practical application",
+      "Noon Sakinah, Meem Sakinah, and Madd rules",
+      "Reading multiple Surahs with increasing fluency and speed",
+      "Reducing hesitation and improving natural flow while reading",
+      "Building familiarity with different Mushaf formats and page layouts",
+    ],
+    importance:
+      "Nazrah bridges the gap between learning to read Arabic and actually reading the Qur'an with confidence. It strengthens a student's ability to recite smoothly without stumbling over words, which is essential before moving into deeper Tajweed study or memorization (Hifz).",
+    duration:
+      "Most students complete this stage within 6 to 12 months, depending on age, consistency, and prior reading ability, with 3 to 4 sessions per week.",
   },
+
   {
     title: "Memorization of The Qur'an (Hifzul Qur'an)",
     level: "Advanced",
     Icon: Icon.Moon,
     accent: "#9BAD30",
-    desc: "For students who can read the Qur'an fluently but want to memorize it. Teaches memorization techniques, portion breakdown, and focuses on recitation with proper Tajweed.",
+    shortDesc:
+      "A structured Hifz programme combining systematic memorization, Tajweed, daily revision, and long-term retention.",
+    description:
+      "Hifzul Qur'an is a structured memorization program for students who have completed Nazrah and can read the Qur'an fluently and accurately. Students memorize the Qur'an Juz by Juz under close guidance, with continuous revision (Muraja'ah) to ensure retention. This course combines memorization with correct Tajweed application, helping students build a strong, lasting connection with the Qur'an.",
+    learn: [
+      "Systematic memorization of the Qur'an, Juz by Juz",
+      "Proper Tajweed application while memorizing, not just reciting",
+      "Daily revision techniques (Muraja'ah) to retain previously memorized portions",
+      "Linking and connecting Surahs and Ayahs for smoother recall",
+      "Strategies for overcoming common memorization challenges",
+      "Building consistency and discipline in daily memorization habits",
+      "Preparing for and performing Qur'an recitation from memory",
+      "Sabaq, Sabqi, and Manzil revision systems",
+    ],
+    importance:
+      "Memorizing the Qur'an is one of the most rewarding and disciplined journeys a Muslim can undertake. It preserves the Qur'an within the heart, strengthens daily worship, and deepens understanding of its meanings over time. Hifz also develops focus, memory retention, and discipline.",
+    duration:
+      "Memorization pace depends heavily on focus, consistency, and daily commitment. A well-focused student attending regularly may memorize a Juz in as little as 2 months, while others may require longer. Completing the full Qur'an typically ranges from 2 to 5 years depending on individual pace and revision consistency.",
   },
+
   {
     title: "Revision For Huffaz (Murojah)",
     level: "Huffaz",
     Icon: Icon.RotateCcw,
     accent: "#D77129",
-    desc: "For students who have already memorized the Qur'an but struggle with retention. Focuses on regular revision, recitation, and techniques to maintain memorization.",
+    shortDesc:
+      "Structured Muraja'ah for Huffaz who want to strengthen, maintain, and protect their Qur'an memorization.",
+    description:
+      "Murojah is a dedicated revision program for students who have already completed memorization of the Qur'an but need structured support to retain it. Many Huffaz struggle to keep their memorization strong without consistent revision, and this course addresses that directly through regular recitation, review cycles, and retention techniques. Students recite in front of a qualified teacher who corrects mistakes and tracks weak areas for targeted revision.",
+    learn: [
+      "Structured revision cycles covering the full Qur'an on a rotating schedule",
+      "Techniques to identify and strengthen weak or fading portions",
+      "Methods for daily, weekly, and monthly revision planning",
+      "Correcting memorization errors that developed over time",
+      "Improving recitation speed and accuracy from memory",
+      "Strategies to prevent forgetting through spaced repetition",
+      "Listening and paired-revision techniques",
+      "Building a sustainable long-term revision habit",
+    ],
+    importance:
+      "Memorizing the Qur'an is only half the journey — retaining it requires consistent revision. Without regular Muraja'ah, even strong memorization can become weaker over time. This course helps Huffaz protect what they have memorized, catch mistakes early, and develop habits that keep their memorization strong.",
+    duration:
+      "A set number of pages is assigned per session based on the student's attendance and pace. A full revision cycle through the Qur'an is completed on a rotating basis, with the pace adjusted according to each student's schedule and ability.",
   },
 ];
 
@@ -462,6 +565,50 @@ const whyCards = [
     title: "Supportive Community",
     desc: "A warm family of learners. Parents receive weekly reports and dedicated WhatsApp support.",
   },
+];
+
+const pricingPlans = [
+  {
+    title: "Twice Weekly",
+    sessions: "8 sessions / month",
+    priceNaira: "₦40,000",
+    priceDollar: "$40",
+    description:
+      "A steady and flexible programme for students who want consistent Qur'an learning alongside school, work, or other commitments.",
+    accent: "#9BAD30",
+    icon: Icon.Calendar,
+  },
+  {
+    title: "Three Times Weekly",
+    sessions: "12 sessions / month",
+    priceNaira: "₦50,000",
+    priceDollar: "$50",
+    description:
+      "Our balanced programme for students who want faster progress while maintaining a sustainable weekly learning routine.",
+    accent: "#D77129",
+    icon: Icon.Zap,
+    popular: true,
+  },
+  {
+    title: "Four Times Weekly",
+    sessions: "16 sessions / month",
+    priceNaira: "₦60,000",
+    priceDollar: "$60",
+    description:
+      "Our most intensive programme for students committed to accelerating their Qur'an reading, memorization, or revision journey.",
+    accent: "#9BAD30",
+    icon: Icon.Star,
+  },
+];
+
+const perks = [
+  "Personalised 1-on-1 sessions (30 to 45 minutes per session)",
+  "Flexible scheduling to fit your lifestyle",
+  "Highly knowledgeable and dedicated instructors",
+  "Access to comprehensive Qur'anic education materials",
+  "Focus on recitation precision and memorization excellence",
+  "Regular progress monitoring and feedback",
+  "Secure online payment & digital receipt",
 ];
 
 const faqs = [
@@ -881,48 +1028,51 @@ function Hero({ onNav }: { onNav: (s: string) => void }) {
               filter: "drop-shadow(0 2px 4px rgba(23, 63, 33, 0.3))",
             }}
           >
-            وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ
+            قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا
+            يَعْلَمُونَ ۗ إِنَّمَا يَتَذَكَّرُ أُولُو الْأَلْبَابِ
           </p>
           <p className="text-white/50 text-xs font-sans mt-2 tracking-wide">
-            "And We have certainly made the Qur'an easy to remember. So is there
-            anyone who will be mindful?" — Al-Qamar 54:17
+            "Say, ‘Are those who know equal to those who do not know?’ Only
+            those of understanding will be mindful." — Az-Zumar 39:9
           </p>
         </div>
 
         <OrnamentDivider light />
 
         {/* Logo lockup */}
-        <div className="anim-fade-up d-200 flex items-center justify-center gap-3 mb-6 soft-3d">
+        <div className="anim-fade-up d-200 flex flex-col items-center justify-center mb-6 soft-3d text-center">
           <Image
             src="/images/fikr-logo.jpeg"
             alt="Fikr Quran Academy"
-            width={56}
-            height={56}
-            className="rounded-full object-contain bg-white/10 ring-2 ring-olive/30 p-1 floating-glow"
+            width={170}
+            height={170}
+            className="rounded-full object-contain bg-white/10 ring-2 ring-olive/30 p-2 floating-glow mb-4"
           />
-          <div className="text-left">
-            <div className="font-display text-xl text-white font-bold leading-tight text-depth">
+
+          <div className="text-center">
+            <div className="font-display text-4xl text-white font-bold leading-tight text-depth">
               Fikr Quran Academy
             </div>
-            <div className="text-olive/70 text-[10px] tracking-[.22em] uppercase font-sans">
+
+            <div className="text-olive/70 text-[10px] tracking-[.22em] uppercase font-sans mt-1">
               Online Islamic Education
             </div>
           </div>
         </div>
 
         {/* Headline */}
-        <h1 className="anim-fade-up d-300 font-display text-4xl sm:text-5xl lg:text-6xl text-white font-bold leading-[1.08] mb-5 text-depth soft-3d">
-          Building Strong Muslims
-          <br />
-          Through{" "}
-          <span className="text-gradient italic">Structured Qur'an</span>
-          <br />
-          and Islamic Education
+        <h1 className="anim-fade-up d-300 font-display text-4xl sm:text-5xl lg:text-6xl text-white font-extrabold tracking-[-0.03em] leading-[1.02] mb-6 text-depth">
+          <span className="block">Qur'an Education</span>
+          <span className="block text-olive">That Builds</span>
+          <span className="block">
+            <span className="text-white">Strong Muslims.</span>
+          </span>
         </h1>
 
-        <p className="anim-fade-up d-400 text-white/60 font-sans text-base sm:text-lg leading-relaxed mb-9 max-w-lg">
-          World-class personalised 1-on-1 Qur'an education for children and
-          adults — from Nigeria to the world.
+        <p className="anim-fade-up d-400 text-white/65 font-sans text-base sm:text-lg leading-7 mb-9 max-w-xl tracking-[-0.01em]">
+          Structured, personalised Qur'an and Islamic education designed to
+          produce confident, consistent, and grounded Muslims — from Nigeria to
+          the world.
         </p>
 
         <div className="anim-fade-up d-500 flex flex-wrap justify-center gap-4">
@@ -939,6 +1089,8 @@ function Hero({ onNav }: { onNav: (s: string) => void }) {
           {[
             { v: "4+", l: "Countries" },
             { v: "98%", l: "Satisfaction" },
+            { v: "5yrs+", l: "Experience" },
+            { v: "100%", l: "Separate classes" },
           ].map((s) => (
             <div key={s.l} className="text-center">
               <div className="font-display text-2xl sm:text-3xl text-olive font-bold">
@@ -1021,7 +1173,7 @@ function About() {
         </div>
 
         {/* Mission / Vision */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6">
           {/* Mission */}
           <div
             className={`reveal ${vis ? "visible" : ""} rounded-3xl overflow-hidden shadow-xl flex`}
@@ -1085,31 +1237,6 @@ function About() {
             </div>
           </div>
         </div>
-
-        {/* Stats strip */}
-        <div
-          className={`grid grid-cols-3 gap-4 reveal ${vis ? "visible" : ""}`}
-          style={{ transitionDelay: ".5s" }}
-        >
-          {[
-            { v: "5+", l: "Years of Experience", Icon: Icon.Award },
-            { v: "4+", l: "Countries Reached", Icon: Icon.Globe },
-            { v: "100%", l: "Separate Classes", Icon: Icon.User },
-          ].map((s) => (
-            <div
-              key={s.l}
-              className="bg-white rounded-2xl p-6 text-center shadow-md border border-forest/5 card-3d group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-forest/8 flex items-center justify-center text-forest/50 mx-auto mb-3 group-hover:bg-olive/15 group-hover:text-olive transition-colors duration-300">
-                <s.Icon />
-              </div>
-              <div className="font-display text-3xl text-forest font-bold">
-                {s.v}
-              </div>
-              <div className="text-forest/45 text-sm font-sans mt-1">{s.l}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
@@ -1149,13 +1276,16 @@ function WhyChoose({ onNav }: { onNav: (s: string) => void }) {
                     className="font-arabic text-xl text-olive mb-1.5"
                     dir="rtl"
                   >
-                    اقْرَأْ بِاسْمِ رَبِّكَ
+                    وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن
+                    مُّدَّكِرٍوَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ
+                    مِن مُّدَّكِرٍ
                   </p>
                   <p className="text-white font-display text-base font-semibold">
-                    "Read! In the name of your Lord"
+                    "And We have certainly made the Qur’an easy for remembrance,
+                    so is there anyone who will take heed?d"
                   </p>
                   <p className="text-white/50 text-xs font-sans mt-0.5">
-                    — Surah Al-Alaq 96:1
+                    — Surah Al-Qamar 54:17
                   </p>
                 </div>
               </div>
@@ -1210,6 +1340,9 @@ function WhyChoose({ onNav }: { onNav: (s: string) => void }) {
 // ─── Programmes ───────────────────────────────────────────────────────────────
 function Programmes({ onNav }: { onNav: (s: string) => void }) {
   const { ref, vis } = useReveal();
+  const [selectedProgramme, setSelectedProgramme] = useState<
+    (typeof programmes)[number] | null
+  >(null);
   return (
     <section id="programmes" ref={ref} className="py-24 sm:py-32 bg-cream">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
@@ -1229,51 +1362,239 @@ function Programmes({ onNav }: { onNav: (s: string) => void }) {
           {programmes.map((p, i) => (
             <div
               key={p.title}
-              className={`shine bg-white rounded-3xl overflow-hidden shadow-md border border-forest/5 hover:shadow-xl transition-all duration-400 hover:-translate-y-1.5 card-3d group reveal ${vis ? "visible" : ""}`}
+              className={`shine bg-white rounded-3xl overflow-hidden shadow-md border border-forest/5 hover:shadow-xl transition-all duration-400 hover:-translate-y-1.5 card-3d group reveal ${
+                vis ? "visible" : ""
+              }`}
               style={{ transitionDelay: `${i * 0.08 + 0.15}s` }}
             >
               {/* Accent bar */}
               <div
                 className="h-1.5 w-full"
                 style={{
-                  background: `linear-gradient(90deg,${p.accent},transparent)`,
+                  background: `linear-gradient(90deg, ${p.accent}, transparent)`,
                 }}
               />
+
               <div className="p-7">
+                {/* Icon */}
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300 group-hover:scale-110"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
                   style={{
                     background: `${p.accent}18`,
                     color: p.accent,
-                    transform: "scale(1)",
-                    transition: "transform .3s ease",
                   }}
                 >
                   <p.Icon />
                 </div>
+
+                {/* Level */}
                 <span
                   className="chip mb-3"
-                  style={{ background: `${p.accent}12`, color: p.accent }}
+                  style={{
+                    background: `${p.accent}12`,
+                    color: p.accent,
+                  }}
                 >
                   {p.level}
                 </span>
-                <h3 className="font-display text-lg text-forest font-bold mt-2 mb-2">
+
+                {/* Title */}
+                <h3 className="font-display text-lg text-forest font-bold mt-2 mb-3">
                   {p.title}
                 </h3>
+
+                {/* Short description */}
                 <p className="text-forest/55 font-sans text-sm leading-relaxed mb-6">
-                  {p.desc}
+                  {p.shortDesc}
                 </p>
-                <button
-                  onClick={() => onNav("register")}
-                  className="flex items-center gap-1.5 text-sm font-sans font-semibold transition-colors duration-200"
-                  style={{ color: p.accent }}
-                >
-                  Enrol in this Programme <Icon.ArrowRight />
-                </button>
+
+                {/* Actions */}
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setSelectedProgramme(p)}
+                    className="flex-1 px-4 py-2.5 rounded-xl border font-sans text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
+                    style={{
+                      borderColor: `${p.accent}40`,
+                      color: p.accent,
+                      background: `${p.accent}08`,
+                    }}
+                  >
+                    Learn More
+                  </button>
+
+                  <button
+                    onClick={() => onNav("register")}
+                    className="flex-1 px-4 py-2.5 rounded-xl text-white font-sans text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                    style={{
+                      background: p.accent,
+                    }}
+                  >
+                    Enrol Now
+                  </button>
+                </div>
               </div>
             </div>
           ))}
         </div>
+
+        {selectedProgramme && (
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="programme-modal-title"
+            onMouseDown={(e) => {
+              if (e.target === e.currentTarget) {
+                setSelectedProgramme(null);
+              }
+            }}
+          >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-forest/70 backdrop-blur-md" />
+
+            {/* Modal */}
+            <div className="relative w-full max-w-3xl max-h-[90vh] overflow-hidden bg-white rounded-[2rem] shadow-2xl">
+              {/* Top accent */}
+              <div
+                className="h-1.5 w-full"
+                style={{
+                  background: selectedProgramme.accent,
+                }}
+              />
+
+              {/* Close button */}
+              <button
+                onClick={() => setSelectedProgramme(null)}
+                aria-label="Close programme details"
+                className="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-forest/5 text-forest/60 flex items-center justify-center hover:bg-forest/10 hover:text-forest transition-colors"
+              >
+                <Icon.X />
+              </button>
+
+              {/* Scrollable content */}
+              <div className="overflow-y-auto max-h-[calc(90vh-6px)] p-6 sm:p-9">
+                {/* Header */}
+                <div className="pr-10">
+                  <span
+                    className="chip inline-flex mb-3"
+                    style={{
+                      background: `${selectedProgramme.accent}12`,
+                      color: selectedProgramme.accent,
+                    }}
+                  >
+                    {selectedProgramme.level}
+                  </span>
+
+                  <h2
+                    id="programme-modal-title"
+                    className="font-display text-2xl sm:text-3xl font-bold text-forest leading-tight mb-4"
+                  >
+                    {selectedProgramme.title}
+                  </h2>
+
+                  <p className="font-sans text-forest/65 leading-relaxed">
+                    {selectedProgramme.description}
+                  </p>
+                </div>
+
+                {/* What You'll Learn */}
+                <div className="mt-8">
+                  <h3 className="font-display text-lg font-bold text-forest mb-4">
+                    What You'll Learn
+                  </h3>
+
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {selectedProgramme.learn.map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-start gap-3 p-3.5 rounded-xl bg-forest/[0.03]"
+                      >
+                        <div
+                          className="w-5 h-5 shrink-0 rounded-full flex items-center justify-center mt-0.5"
+                          style={{
+                            background: `${selectedProgramme.accent}18`,
+                            color: selectedProgramme.accent,
+                          }}
+                        >
+                          <Icon.Check />
+                        </div>
+
+                        <span className="font-sans text-sm text-forest/70 leading-relaxed">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Why It's Important */}
+                <div className="mt-8">
+                  <h3 className="font-display text-lg font-bold text-forest mb-3">
+                    Why It's Important
+                  </h3>
+
+                  <div
+                    className="p-5 rounded-2xl"
+                    style={{
+                      background: `${selectedProgramme.accent}08`,
+                      border: `1px solid ${selectedProgramme.accent}18`,
+                    }}
+                  >
+                    <p className="font-sans text-sm text-forest/70 leading-relaxed">
+                      {selectedProgramme.importance}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Duration */}
+                <div className="mt-8">
+                  <h3 className="font-display text-lg font-bold text-forest mb-3">
+                    Expected Duration
+                  </h3>
+
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-10 h-10 shrink-0 rounded-xl flex items-center justify-center"
+                      style={{
+                        background: `${selectedProgramme.accent}12`,
+                        color: selectedProgramme.accent,
+                      }}
+                    >
+                      <Icon.Clock />
+                    </div>
+
+                    <p className="font-sans text-sm text-forest/65 leading-relaxed pt-1.5">
+                      {selectedProgramme.duration}
+                    </p>
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <div className="mt-9 pt-6 border-t border-forest/10 flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={() => {
+                      setSelectedProgramme(null);
+                      onNav("register");
+                    }}
+                    className="flex-1 py-3.5 rounded-xl text-white font-sans font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                    style={{
+                      background: selectedProgramme.accent,
+                    }}
+                  >
+                    Enrol in This Programme
+                  </button>
+
+                  <button
+                    onClick={() => setSelectedProgramme(null)}
+                    className="px-6 py-3.5 rounded-xl border border-forest/10 text-forest/65 font-sans font-semibold hover:bg-forest/5 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -1514,90 +1835,268 @@ function Admission() {
 }
 
 // ─── Fees ─────────────────────────────────────────────────────────────────────
+
 function Fees({ onNav }: { onNav: (s: string) => void }) {
   const { ref, vis } = useReveal();
-  const perks = [
-    "Personalised 1-on-1 sessions (30 to 45 minutes per session)",
-    "Flexible scheduling to fit your lifestyle",
-    "Highly knowledgeable and dedicated instructors",
-    "Access to comprehensive Qur'anic education materials",
-    "Focus on recitation precision and memorization excellence",
-    "Regular progress monitoring and feedback",
-    "Secure online payment & digital receipt",
-  ];
   return (
-    <section id="fees" ref={ref} className="py-24 sm:py-32 bg-forest">
-      <div className="max-w-3xl mx-auto px-5 sm:px-8">
-        <div className={`text-center mb-14 reveal ${vis ? "visible" : ""}`}>
-          <SectionLabelLight>Pricing</SectionLabelLight>
-          <h2 className="font-display text-4xl sm:text-5xl text-white font-bold mt-2 mb-3">
+    <section id="fees" className="py-24 sm:py-32">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
+        {/* Section heading */}
+        <div
+          ref={ref}
+          className={`text-center mb-14 reveal ${vis ? "visible" : ""}`}
+        >
+          <span className="chip mb-4 inline-block bg-olive/10 text-olive">
+            Pricing
+          </span>
+
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white font-bold leading-tight text-depth">
             Simple, Transparent Fees
           </h2>
-          <OrnamentDivider light />
+
+          <p className="text-white/50 font-sans text-base sm:text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
+            Choose a learning schedule that matches your goals, availability,
+            and desired pace of progress.
+          </p>
         </div>
 
-        <div
-          className={`reveal ${vis ? "visible" : ""}`}
-          style={{ transitionDelay: ".2s" }}
-        >
-          <div className="bg-forest-mid rounded-3xl overflow-hidden border border-white/10 shadow-2xl grad-border">
-            {/* Price header */}
-            <div className="bg-gradient-to-br from-olive/15 to-amber/10 px-8 sm:px-12 py-10 text-center border-b border-white/10">
-              <span
-                className="chip mb-4 inline-block"
-                style={{ background: "rgba(155,173,48,.18)", color: "#9BAD30" }}
+        {/* Pricing Cards */}
+        <div className="grid md:grid-cols-3 gap-5 lg:gap-6 items-stretch">
+          {pricingPlans.map((plan, i) => {
+            const PlanIcon = plan.icon;
+
+            return (
+              <div
+                key={plan.title}
+                className={`relative reveal ${
+                  vis ? "visible" : ""
+                } ${plan.popular ? "md:-translate-y-3" : ""}`}
+                style={{
+                  transitionDelay: `${0.15 + i * 0.1}s`,
+                }}
               >
-                1-on-1 Programme Pricing
-              </span>
-              <div className="space-y-3">
-                <div>
-                  <span className="font-display text-4xl text-white font-bold">
-                    ₦40k
-                  </span>
-                  <span className="text-white/40 font-sans text-base ml-2">
-                    / month - Twice weekly (8 sessions)
-                  </span>
-                </div>
-                <div>
-                  <span className="font-display text-4xl text-white font-bold">
-                    ₦50k
-                  </span>
-                  <span className="text-white/40 font-sans text-base ml-2">
-                    / month - Three times weekly (12 sessions)
-                  </span>
-                </div>
-                <div>
-                  <span className="font-display text-4xl text-white font-bold">
-                    ₦60k
-                  </span>
-                  <span className="text-white/40 font-sans text-base ml-2">
-                    / month - Four times weekly (16 sessions)
-                  </span>
+                {/* Recommended badge */}
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                    <span
+                      className="px-4 py-1.5 rounded-full text-[10px] font-sans font-bold uppercase tracking-[.16em] text-white shadow-lg"
+                      style={{
+                        background: plan.accent,
+                      }}
+                    >
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div
+                  className={`relative h-full flex flex-col rounded-3xl overflow-hidden border shadow-2xl transition-all duration-300 hover:-translate-y-1 ${
+                    plan.popular
+                      ? "border-amber/40 bg-forest-mid"
+                      : "border-white/10 bg-forest-mid"
+                  }`}
+                >
+                  {/* Accent line */}
+                  <div
+                    className="h-1.5 w-full"
+                    style={{
+                      background: `linear-gradient(90deg, ${plan.accent}, transparent)`,
+                    }}
+                  />
+
+                  <div className="p-7 sm:p-8 flex flex-col flex-1">
+                    {/* Icon */}
+                    <div
+                      className="w-12 h-12 rounded-2xl flex items-center justify-center mb-6"
+                      style={{
+                        background: `${plan.accent}18`,
+                        color: plan.accent,
+                      }}
+                    >
+                      <PlanIcon />
+                    </div>
+
+                    {/* Plan title */}
+                    <h3 className="font-display text-xl text-white font-bold mb-2">
+                      {plan.title}
+                    </h3>
+
+                    {/* Sessions */}
+                    <p
+                      className="font-sans text-sm font-medium mb-7"
+                      style={{ color: plan.accent }}
+                    >
+                      {plan.sessions}
+                    </p>
+
+                    {/* Price */}
+                    <div className="mb-5">
+                      <div className="flex items-baseline gap-2">
+                        <span className="font-display text-4xl sm:text-5xl text-white font-bold tracking-tight">
+                          {plan.priceNaira}
+                        </span>
+                        <span className="text-white/40 font-sans text-sm">
+                          / month
+                        </span>
+                      </div>
+
+                      <div className="mt-2 text-white/40 font-sans text-sm">
+                        Equivalent to{" "}
+                        <span className="text-white/65 font-semibold">
+                          {plan.priceDollar}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-white/55 font-sans text-sm leading-relaxed mb-8">
+                      {plan.description}
+                    </p>
+
+                    {/* Divider */}
+                    <div className="h-px bg-white/10 mb-7" />
+
+                    {/* What's included */}
+                    <div className="mb-8">
+                      <p className="text-white/80 font-sans text-xs font-bold uppercase tracking-[.14em] mb-4">
+                        What's Included
+                      </p>
+
+                      <ul className="space-y-3">
+                        {[
+                          "1-on-1 personalised sessions",
+                          "30–45 minutes per session",
+                          "Flexible scheduling",
+                          "Progress monitoring",
+                        ].map((item) => (
+                          <li key={item} className="flex items-start gap-2.5">
+                            <div
+                              className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                              style={{
+                                background: `${plan.accent}18`,
+                                color: plan.accent,
+                              }}
+                            >
+                              <Icon.Check />
+                            </div>
+
+                            <span className="text-white/55 font-sans text-sm leading-relaxed">
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* CTA */}
+                    <div className="mt-auto">
+                      <button
+                        onClick={() => onNav("register")}
+                        className="w-full py-3.5 rounded-2xl font-sans font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                        style={{
+                          background: plan.popular
+                            ? plan.accent
+                            : `${plan.accent}15`,
+                          color: plan.popular ? "#fff" : plan.accent,
+                          border: plan.popular
+                            ? "none"
+                            : `1px solid ${plan.accent}35`,
+                        }}
+                      >
+                        Choose This Plan
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* Perks */}
-            <div className="px-8 sm:px-12 py-8">
-              <ul className="space-y-4 mb-9">
-                {perks.map((p) => (
-                  <li key={p} className="flex items-start gap-3.5">
-                    <div className="w-5 h-5 rounded-full bg-olive/20 flex items-center justify-center text-olive shrink-0 mt-0.5">
+            );
+          })}
+        </div>
+
+        {/* Shared benefits */}
+        <div
+          className={`mt-16 reveal ${vis ? "visible" : ""}`}
+          style={{ transitionDelay: ".5s" }}
+        >
+          <div className="relative overflow-hidden rounded-[2rem] bg-[#F4F6E8] border border-[#9BAD30]/20 shadow-xl">
+            {/* Decorative background elements */}
+            <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-olive/10 blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-amber/10 blur-3xl pointer-events-none" />
+
+            <div className="relative grid lg:grid-cols-[0.8fr_1.5fr] gap-10 lg:gap-16 p-7 sm:p-10 lg:p-14">
+              {/* Left: Introduction */}
+              <div className="flex flex-col justify-center">
+                <span className="inline-flex w-fit items-center gap-2 px-3 py-1.5 rounded-full bg-olive/10 text-olive font-sans text-[10px] font-bold uppercase tracking-[0.16em] mb-5">
+                  The Fikr Standard
+                </span>
+
+                <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl text-forest font-bold leading-tight mb-4">
+                  More than a class.
+                  <br />
+                  <span className="text-olive">
+                    A complete learning experience.
+                  </span>
+                </h3>
+
+                <p className="text-forest/55 font-sans text-sm sm:text-base leading-relaxed max-w-md">
+                  Every student receives the same high standard of personalised
+                  attention, structured learning, and continuous support —
+                  regardless of the programme or schedule they choose.
+                </p>
+
+                {/* Small trust indicator */}
+                <div className="flex items-center gap-3 mt-7 pt-6 border-t border-forest/10">
+                  <div className="w-10 h-10 rounded-xl bg-olive/10 flex items-center justify-center text-olive">
+                    <Icon.Award />
+                  </div>
+
+                  <div>
+                    <p className="font-display text-sm font-bold text-forest">
+                      Personalised 1-on-1 Learning
+                    </p>
+                    <p className="font-sans text-xs text-forest/45 mt-0.5">
+                      Built around every student's pace
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: Benefits */}
+              <div className="grid sm:grid-cols-2 gap-3">
+                {perks.map((perk, index) => (
+                  <div
+                    key={perk}
+                    className="group flex items-start gap-4 rounded-2xl bg-white/65 border border-forest/[0.06] p-4 sm:p-5 transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-md"
+                  >
+                    {/* Number */}
+                    <span className="font-display text-xs font-bold text-forest/20 pt-1 w-4 shrink-0">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    {/* Check */}
+                    <div className="w-8 h-8 rounded-xl bg-olive/10 text-olive flex items-center justify-center shrink-0 group-hover:bg-olive group-hover:text-white transition-colors duration-300">
                       <Icon.Check />
                     </div>
-                    <span className="text-white/65 font-sans text-sm leading-relaxed">
-                      {p}
+
+                    {/* Text */}
+                    <span className="text-forest/65 font-sans text-sm leading-relaxed pt-1">
+                      {perk}
                     </span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
-              <button
-                onClick={() => onNav("register")}
-                className="w-full bg-amber hover:bg-amber/90 text-white py-4 rounded-2xl font-sans font-semibold text-base transition-all duration-300 hover:shadow-[0_0_32px_rgba(215,113,41,.4)]"
-              >
-                Enrol Now & Start Learning
-              </button>
+              </div>
             </div>
           </div>
+        </div>
+        {/* Bottom reassurance */}
+        <div
+          className={`text-center mt-8 reveal ${vis ? "visible" : ""}`}
+          style={{ transitionDelay: ".6s" }}
+        >
+          <p className="text-white/35 font-sans text-xs sm:text-sm">
+            All programmes are delivered online through personalised 1-on-1
+            classes.
+          </p>
         </div>
       </div>
     </section>
