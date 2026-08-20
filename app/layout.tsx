@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title:
-    "Fikr Quran Academy - Building Strong Muslims Through Structured Qur'an Education",
+  title: "Fikr Quran Academy — Premium Qur'an Education, Worldwide",
   description:
-    "World-class personalised 1-on-1 Qur'an education for children and adults — from Nigeria to the world. Join our online Islamic education academy.",
+    "Structured, personalised 1-on-1 Qur'an education for adults, students, and families — from foundational reading to complete memorisation. Accessible from anywhere in the world.",
   keywords: [
     "Quran Academy",
     "Islamic Education",
@@ -16,20 +12,23 @@ export const metadata: Metadata = {
     "Tajweed",
     "Hifz Programme",
     "1-on-1 Quran Classes",
+    "Quran for Adults",
+    "Quran Memorisation",
+    "Online Islamic Academy",
   ],
   authors: [{ name: "Fikr Quran Academy" }],
   openGraph: {
-    title: "Fikr Quran Academy - Online Islamic Education",
+    title: "Fikr Quran Academy — Premium Qur'an Education, Worldwide",
     description:
-      "World-class personalised 1-on-1 Qur'an education for children and adults worldwide",
+      "Structured, personalised 1-on-1 Qur'an education for adults, students, and families worldwide.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fikr Quran Academy - Online Islamic Education",
+    title: "Fikr Quran Academy — Premium Qur'an Education, Worldwide",
     description:
-      "World-class personalised 1-on-1 Qur'an education for children and adults worldwide",
+      "Structured, personalised 1-on-1 Qur'an education for adults, students, and families worldwide.",
   },
   robots: {
     index: true,
@@ -48,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -56,13 +55,23 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
+        {/* Theme initialisation: runs before paint to prevent flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function() {
+  try {
+    var stored = localStorage.getItem('fikr-theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+  } catch(e) {}
+})();
+            `.trim(),
+          }}
+        />
       </head>
-      <body
-        className={inter.className}
-        style={{ fontFamily: "Outfit, system-ui, sans-serif" }}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

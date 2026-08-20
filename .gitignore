@@ -10,6 +10,12 @@ lerna-debug.log*
 .next/
 out/
 
+.agents/
+.claude/
+.figma/
+.kiro/
+.vscode/
+
 # Production
 /dist/
 
@@ -75,10 +81,14 @@ typings/
 # dotenv environment variables file
 .env
 .env.local
+.env.example
 .env.development.local
 .env.test.local
 .env.production.local
 
+
+#documents
+docs/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -129,3 +139,4 @@ Thumbs.db
 
 # Local env files
 .env*.local
+/generated/prisma
