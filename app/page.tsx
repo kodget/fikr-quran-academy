@@ -2037,11 +2037,6 @@ function Testimonials({
 }) {
   const { ref, vis } = useReveal();
   const [idx, setIdx] = useState(0);
-
-  // Don't render if no testimonials loaded yet
-  if (!testimonialsReady || testimonials.length === 0) {
-    return null;
-  }
   const [fading, setFading] = useState(false);
   const total = testimonials.length;
 
@@ -2056,6 +2051,11 @@ function Testimonials({
     },
     [fading, total],
   );
+
+  // Don't render if no testimonials loaded yet
+  if (!testimonialsReady || testimonials.length === 0) {
+    return null;
+  }
 
   return (
     <section

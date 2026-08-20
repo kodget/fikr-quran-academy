@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function PaymentCallbackPage() {
+function PaymentCallbackContent() {
   const searchParams = useSearchParams();
-  const [status, setStatus] = useState<"verifying" | "success" | "failed">("verifying");
+  const [status, setStatus] = useState<"verifying" | "success" | "failed">(
+    "verifying",
+  );
   const [applicationId, setApplicationId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -24,7 +26,9 @@ export default function PaymentCallbackPage() {
 
   const verifyPayment = async (reference: string) => {
     try {
-      const response = await fetch(`/api/payment/verify?reference=${reference}`);
+      const response = await fetch(
+        `/api/payment/verify?reference=${reference}`,
+      );
       const data = await response.json();
 
       if (data.success && data.data.status === "success") {
@@ -263,7 +267,9 @@ export default function PaymentCallbackPage() {
             >
               {error || "We could not process your payment. Please try again."}
             </p>
-            <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
+            <div
+              style={{ display: "flex", gap: "1rem", justifyContent: "center" }}
+            >
               <a
                 href="/#register"
                 style={{
@@ -312,5 +318,36 @@ export default function PaymentCallbackPage() {
         }
       `}</style>
     </div>
+  );
+}
+
+export default function PaymentCallbackPage() {
+  return (
+    <Suspense
+      fallback={
+        <div
+          style={{
+            minHeight: "100vh",
+            background: "var(--primary)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "64px",
+              height: "64px",
+              border: "4px solid rgba(232,116,68,0.3)",
+              borderTopColor: "var(--accent)",
+              borderRadius: "50%",
+              animation: "spin 1s linear infinite",
+            }}
+          />
+        </div>
+      }
+    >
+      <PaymentCallbackContent />
+    </Suspense>
   );
 }
