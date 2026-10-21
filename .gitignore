@@ -103,7 +103,7 @@ dist
 
 # Gatsby files
 .cache/
-public
+# public  <-- removed: this was a Gatsby rule. Next.js serves from /public, do NOT ignore it.
 
 # Storybook build outputs
 .out
